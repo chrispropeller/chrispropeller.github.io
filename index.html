@@ -113,8 +113,9 @@
     .article {
       display: grid;
       grid-template-columns: 1fr auto;
+      grid-template-rows: auto auto;
       align-items: baseline;
-      gap: 16px;
+      gap: 2px 16px;
       padding: 14px 8px;
       text-decoration: none;
       color: inherit;
@@ -130,6 +131,27 @@
       font-weight: 400;
       line-height: 1.4;
       transition: color 0.15s;
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .article-sub {
+      grid-column: 1 / -1;
+      grid-row: 2;
+      font-size: 0.82rem;
+      font-style: italic;
+      color: var(--muted);
+      line-height: 1.5;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.3s ease, opacity 0.25s ease, margin 0.3s ease;
+      margin-top: 0;
+    }
+    .article:hover .article-sub {
+      max-height: 60px;
+      opacity: 1;
+      margin-top: 4px;
     }
 
     .article-meta {
@@ -137,6 +159,8 @@
       color: var(--muted);
       white-space: nowrap;
       font-weight: 400;
+      grid-column: 2;
+      grid-row: 1;
     }
 
     footer {
@@ -161,10 +185,13 @@
     section:nth-of-type(1) { animation: fadeUp 0.5s ease both; animation-delay: 0.05s; }
     section:nth-of-type(2) { animation: fadeUp 0.5s ease both; animation-delay: 0.12s; }
     section:nth-of-type(3) { animation: fadeUp 0.5s ease both; animation-delay: 0.19s; }
+    section:nth-of-type(4) { animation: fadeUp 0.5s ease both; animation-delay: 0.26s; }
+    section:nth-of-type(5) { animation: fadeUp 0.5s ease both; animation-delay: 0.33s; }
 
     @media (max-width: 500px) {
       .article { grid-template-columns: 1fr; }
       .article-meta { display: none; }
+      .article-sub { max-height: none; opacity: 1; margin-top: 4px; }
     }
   </style>
 </head>
@@ -194,17 +221,20 @@
 
         <a class="article" href="https://chrisfenster.substack.com/p/when-everything-is-a-system-of-record" target="_blank" rel="noopener">
           <div class="article-title">When Everything Is a System of Record, Nothing Is</div>
-          <span class="article-meta">2026</span>
+          <div class="article-sub">The P in ERP stands for Planning, but it hasn't planned anything in decades. Agents are about to call that bluff.</div>
+          <span class="article-meta">Mar 2026</span>
         </a>
 
         <a class="article" href="https://chrisfenster.substack.com/p/software-cant-dig" target="_blank" rel="noopener">
           <div class="article-title">Software Can't Dig</div>
-          <span class="article-meta">2026</span>
+          <div class="article-sub">Everyone's debating whether SaaS or "Services as Software" wins. Nobody's asking the harder question.</div>
+          <span class="article-meta">Feb 2026</span>
         </a>
 
         <a class="article" href="https://chrisfenster.substack.com/p/the-context-graph-opportunity-everyones" target="_blank" rel="noopener">
           <div class="article-title">The Context Graph Opportunity Everyone's Missing</div>
-          <span class="article-meta">2025</span>
+          <div class="article-sub">Foundation Capital and Dharmesh Shah are both right. They're also both missing something.</div>
+          <span class="article-meta">Jan 2026</span>
         </a>
 
       </div>
@@ -215,24 +245,40 @@
       <p class="section-label">Propeller Blog</p>
       <div class="article-list">
 
+        <a class="article" href="https://www.propellerindustries.com/your-cap-table-is-your-strategy-part-i-the-system/" target="_blank" rel="noopener">
+          <div class="article-title">Your Cap Table Is Your Strategy Part I: The System</div>
+          <div class="article-sub">The most consequential decisions in your company are being made inside a spreadsheet nobody's maintaining.</div>
+          <span class="article-meta">Apr 2026</span>
+        </a>
+
+        <a class="article" href="https://www.propellerindustries.com/your-next-finance-hire-might-not-be-a-person/" target="_blank" rel="noopener">
+          <div class="article-title">Your Next Finance Hire Might Not Be a Person</div>
+          <div class="article-sub">AI agents are entering the finance org chart. What that means for how you build your team.</div>
+          <span class="article-meta">Mar 2026</span>
+        </a>
+
         <a class="article" href="https://www.propellerindustries.com/the-backward-jump/" target="_blank" rel="noopener">
           <div class="article-title">The Backward Jump</div>
-          <span class="article-meta">Propeller</span>
+          <div class="article-sub">Dick Fosbury and the future of AI adoption.</div>
+          <span class="article-meta">Feb 2026</span>
         </a>
 
         <a class="article" href="https://www.propellerindustries.com/ai-wont-take-the-cfo-job/" target="_blank" rel="noopener">
           <div class="article-title">Why AI Isn't Going to Take the CFO Job</div>
-          <span class="article-meta">Propeller</span>
+          <div class="article-sub">The finance function is changing. The role at the top of it isn't going anywhere.</div>
+          <span class="article-meta">Jan 2026</span>
         </a>
 
         <a class="article" href="https://www.propellerindustries.com/the-talent-paradox-why-most-first-finance-hires-are-ngmi/" target="_blank" rel="noopener">
           <div class="article-title">The Talent Paradox: Why Your First Finance Hire Is NGMI</div>
-          <span class="article-meta">Propeller</span>
+          <div class="article-sub">The more you optimize a finance hire for one stage, the less likely they are to succeed at the next.</div>
+          <span class="article-meta">Dec 2025</span>
         </a>
 
         <a class="article" href="https://www.propellerindustries.com/stop-worrying-about-your-ai-strategy-and-start-experimenting/" target="_blank" rel="noopener">
           <div class="article-title">Stop Worrying About Your AI Strategy and Start Experimenting</div>
-          <span class="article-meta">Propeller</span>
+          <div class="article-sub">You don't need a strategy deck. You need a Wednesday afternoon and a willingness to be wrong.</div>
+          <span class="article-meta">Oct 2025</span>
         </a>
 
       </div>
@@ -243,14 +289,65 @@
       <p class="section-label">Webinars &amp; Video</p>
       <div class="article-list">
 
-        <a class="article" href="https://youtu.be/fd7RbI0PQYE?si=IpSCDF8BIlRM0JA7" target="_blank" rel="noopener">
-          <div class="article-title">There's No Such Thing as a Startup CFO</div>
-          <span class="article-meta">YouTube</span>
+        <a class="article" href="https://youtu.be/cH4IU37WGWk?si=JhLrkoecyMd1HCgy" target="_blank" rel="noopener">
+          <div class="article-title">NextNYC: Your Cap Table Is Your Strategy</div>
+          <div class="article-sub">Why the most consequential decisions in your company live inside a spreadsheet nobody's maintaining.</div>
+          <span class="article-meta">Apr 2026</span>
         </a>
 
         <a class="article" href="https://www.youtube.com/watch?v=pGfDn77ZNa4&t=3s" target="_blank" rel="noopener">
-          <div class="article-title">How Finance Leaders Should Actually Implement AI in 2026</div>
-          <span class="article-meta">YouTube</span>
+          <div class="article-title">NextNYC: How Finance Leaders Should Actually Implement AI in 2026</div>
+          <div class="article-sub">What's working in AI-powered finance operations versus what's still more hype than reality.</div>
+          <span class="article-meta">Feb 2026</span>
+        </a>
+
+        <a class="article" href="https://youtu.be/fd7RbI0PQYE?si=IpSCDF8BIlRM0JA7" target="_blank" rel="noopener">
+          <div class="article-title">NextNYC: There's No Such Thing as a Startup CFO</div>
+          <div class="article-sub">Why the title doesn't match the job, and what that means for founders building finance teams.</div>
+          <span class="article-meta">Jan 2026</span>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- ══ NEWSLETTER ════════════════════════════════════ -->
+    <section>
+      <p class="section-label">The Bottom Line — Newsletter</p>
+      <div class="article-list">
+
+        <a class="article" href="https://go.pardot.com/webmail/1007802/7295267992/084f8a8b2731253856162c4cf970e2cc4498724bbc5dd9656e0f0a435185e61f" target="_blank" rel="noopener">
+          <div class="article-title">February 2026</div>
+          <span class="article-meta">Newsletter</span>
+        </a>
+
+        <a class="article" href="https://go.pardot.com/webmail/1007802/7243431235/278536b68d72e2569fcffd7ca4ccebe06da8c8b7ddb37034656a0c2b1976fdf8" target="_blank" rel="noopener">
+          <div class="article-title">January 2026</div>
+          <span class="article-meta">Newsletter</span>
+        </a>
+
+        <a class="article" href="https://go.pardot.com/webmail/1007802/7178401271/efde941a32c91dd575b982ca32576b36793a47573134094f6036b7ee609b320" target="_blank" rel="noopener">
+          <div class="article-title">December 2025</div>
+          <span class="article-meta">Newsletter</span>
+        </a>
+
+        <a class="article" href="https://go.pardot.com/webmail/1007802/7027411454/988bb1c75cd982673be029bff49bdfe51a389f4f8136ac80a0f298cc335da45d" target="_blank" rel="noopener">
+          <div class="article-title">September 2025</div>
+          <span class="article-meta">Newsletter</span>
+        </a>
+
+        <a class="article" href="https://go.pardot.com/webmail/1007802/6958913455/1d2b9e5b39b64355a2c05f47999eeca4c436bb1cff5f56736495f922e930300a" target="_blank" rel="noopener">
+          <div class="article-title">August 2025</div>
+          <span class="article-meta">Newsletter</span>
+        </a>
+
+        <a class="article" href="https://go.pardot.com/webmail/1007802/6879496548/7f38a03e8c2b03bb6fb20c7769a8b9f26260afca9ac124530a6d6e260e47615c" target="_blank" rel="noopener">
+          <div class="article-title">July 2025</div>
+          <span class="article-meta">Newsletter</span>
+        </a>
+
+        <a class="article" href="https://go.pardot.com/webmail/1007802/6787026082/8998905578fe244b214d080f8759cefaea570fac966f3049ccebe3cc0535635a" target="_blank" rel="noopener">
+          <div class="article-title">June 2025</div>
+          <span class="article-meta">Newsletter</span>
         </a>
 
       </div>
@@ -259,7 +356,7 @@
   </main>
 
   <footer>
-    <p>© <span id="yr"></span> Chris Fenster</p>
+    <p>&copy; <span id="yr"></span> Chris Fenster</p>
     <p><a href="https://www.propellerindustries.com/" target="_blank" rel="noopener">Propeller Industries</a></p>
   </footer>
 
