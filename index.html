@@ -187,6 +187,9 @@
     section:nth-of-type(3) { animation: fadeUp 0.5s ease both; animation-delay: 0.19s; }
     section:nth-of-type(4) { animation: fadeUp 0.5s ease both; animation-delay: 0.26s; }
     section:nth-of-type(5) { animation: fadeUp 0.5s ease both; animation-delay: 0.33s; }
+    section:nth-of-type(6) { animation: fadeUp 0.5s ease both; animation-delay: 0.40s; }
+
+    .section-label.latest { color: var(--accent); }
 
     @media (max-width: 500px) {
       .article { grid-template-columns: 1fr; }
@@ -214,6 +217,40 @@
   </header>
 
   <main>
+
+    <!-- ══ LATEST ════════════════════════════════════════ -->
+    <!-- Keep to the 3–4 most recent pieces across all formats. When something new
+         ships: add it to its own section below, copy it here, drop the oldest. -->
+    <section>
+      <p class="section-label latest">Latest</p>
+      <div class="article-list">
+
+        <a class="article" href="https://www.linkedin.com/events/7498419374752444416/" target="_blank" rel="noopener">
+          <div class="article-title">NextNYC: The Hard Part of AI — What It Takes to Automate Your Finance Function</div>
+          <div class="article-sub">With Charlie O'Donnell. Why half a billion dollars of bookkeeping automation never returned a dollar, where AI actually pays off in the finance stack, and why the hard 70% of deployment is human.</div>
+          <span class="article-meta">Sep 2026 · Webinar</span>
+        </a>
+
+        <a class="article" href="https://www.propellerindustries.com/our-story" target="_blank" rel="noopener">
+          <div class="article-title">A Note From Our Founder</div>
+          <div class="article-sub">The founder letter from the relaunched propellerindustries.com. The short version of the Propeller story — founded in 2008 as an embedded finance partner to venture-stage companies, 1,500+ clients later — and why staying turned out to be the strategy.</div>
+          <span class="article-meta">Aug 2026 · Propeller Blog</span>
+        </a>
+
+        <a class="article" href="https://www.propellerindustries.com/the-hard-part-of-ai-isnt-ai/" target="_blank" rel="noopener">
+          <div class="article-title">The Hard Part of AI Isn't AI</div>
+          <div class="article-sub">BCG's prescription for scaling AI is 10% of the effort on algorithms, 20% on data and technology, 70% on people and process. That may be why the hyperscalers are hiring thousands of forward-deployed engineers and the frontier labs are bankrolling services arms of their own.</div>
+          <span class="article-meta">Jul 2026 · Propeller Blog</span>
+        </a>
+
+        <a class="article" href="https://podcasts.apple.com/us/podcast/chris-fenster-a-masterclass-in-cpg-finance/id1808061316?i=1000774958898" target="_blank" rel="noopener">
+          <div class="article-title">Shelf Help: A Masterclass in CPG Finance</div>
+          <div class="article-sub">Why margins fall before they rise, the working capital death spiral, the Billion-Dollar Beverage Blueprint behind Olipop, Poppi, and Liquid Death, and what changes after a $100M raise.</div>
+          <span class="article-meta">Jul 2026 · Podcast</span>
+        </a>
+
+      </div>
+    </section>
 
     <!-- ══ SUBSTACK ══════════════════════════════════════ -->
     <section>
@@ -254,7 +291,7 @@
 
         <a class="article" href="https://www.propellerindustries.com/our-story" target="_blank" rel="noopener">
           <div class="article-title">A Note From Our Founder</div>
-          <div class="article-sub">Written for the launch of the new propellerindustries.com. Why staying turned out to be the strategy — and how eighteen years of embedded work became the trust, access, and data PropellerOS runs on.</div>
+          <div class="article-sub">The founder letter from the relaunched propellerindustries.com. The short version of the Propeller story — founded in 2008 as an embedded finance partner to venture-stage companies, 1,500+ clients later — and why staying turned out to be the strategy.</div>
           <span class="article-meta">Aug 2026</span>
         </a>
 
@@ -319,6 +356,12 @@
     <section>
       <p class="section-label">Webinars &amp; Video</p>
       <div class="article-list">
+
+        <a class="article" href="https://www.linkedin.com/events/7498419374752444416/" target="_blank" rel="noopener">
+          <div class="article-title">NextNYC: The Hard Part of AI — What It Takes to Automate Your Finance Function</div>
+          <div class="article-sub">With Charlie O'Donnell. Why half a billion dollars of bookkeeping automation never returned a dollar, where AI actually pays off in the finance stack, and why the hard 70% of deployment is human.</div>
+          <span class="article-meta">Sep 2026</span>
+        </a>
 
         <a class="article" href="https://www.linkedin.com/events/7483536378224459776/" target="_blank" rel="noopener">
           <div class="article-title">NextNYC: Building the Plane While Flying It</div>
